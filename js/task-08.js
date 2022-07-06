@@ -10,8 +10,14 @@ const addStylesForForm = (event) => {
     if (email.value === "" || password.value === "") {
         return alert("Заповніть всі поля");
     }
+    const { name, value } = email;
+    const { name: namepass, value: valuepass } = password;
 
-    console.log(`email: ${email.value}, Password: ${password.value}`);
+    const data = {
+        name: value,
+        namepass: valuepass,
+    };
+    console.log(data);
     event.currentTarget.reset();
 };
 
